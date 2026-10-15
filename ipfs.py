@@ -9,7 +9,7 @@ endpoint = "https://ipfs.infura.io:5001/api/v0"
 def pin_to_ipfs(data):
 	assert isinstance(data,dict), f"Error pin_to_ipfs expects a dictionary"
 	#YOUR CODE HERE
-  json_data = json.dumps(data)
+	json_data = json.dumps(data)
 	url = f"{endpoint}/add"
 	params = {"pin":"true"}
 	files = {"file": ("data.json", json_data, "application/json")}
